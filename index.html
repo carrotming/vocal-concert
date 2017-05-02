@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("images/jacky/bg.jpg") no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-left:-100px;
+            left: 50%;
+            bottom: 200px;
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+            animation: move 10s linear infinite normal;
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            background: black;
+            left: 0;
+            top: 0;
+        }
+       ul:hover{
+           animation-play-state: paused;
+       }
+       ul:hover li img{
+           opacity: 0.5;
+
+       }
+
+       ul li:hover img{
+           opacity: 1;
+           width: 250px;
+           height: 250px;
+       }
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+            transition: width 0.5s ,height 0.5s;
+        }
+        li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        @keyframes move {
+            from{
+               transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg)
+            }
+        }
+        .xin{
+            width: 173px;
+            height: 157px;
+            border: none;
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+            animation: start 10s linear 0s infinite normal;
+        }
+        @keyframes start {
+            0%{
+                left: 100px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            20%{
+                left: 300px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            40%{
+                left: 500px;
+                bottom: 500px;
+                opacity: 1;
+            }
+            60%{
+                left: 800px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            80%{
+                left: 1200px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            100%{
+                left: 800px;
+                bottom: -200px;
+            }
+        }
+        .huaBan{
+            width: 63px;
+            height: 80px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: start1 10s linear 0s infinite normal;
+        }
+        @keyframes start1 {
+            0%{
+                left: 100px;
+                top: 100px;
+                opacity: 1;
+            }
+            20%{
+                left: 300px;
+                top: 300px;
+                opacity: 0;
+            }
+            40%{
+                left: 500px;
+                top: 500px;
+                opacity: 1;
+            }
+            60%{
+                left: 800px;
+                top: 300px;
+                opacity: 0;
+            }
+            80%{
+                left: 1200px;
+                top: 100px;
+                opacity: 1;
+            }
+            100%{
+                left: 1600px;
+                top: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/jacky/1.png" alt=""></li>
+    <li><img src="images/jacky/2.jpg" alt=""></li>
+    <li><img src="images/jacky/3.jpg" alt=""></li>
+    <li><img src="images/jacky/4.gif" alt=""></li>
+    <li><img src="images/jacky/5.jpg" alt=""></li>
+    <li><img src="images/jacky/6.jpg" alt=""></li>
+</ul>
+
+<img src="images/jacky/xin.png" alt="" class="xin">
+<img src="images/jacky/huaban.png" alt="" class="huaBan">
+<audio src="images/jacky/江哥最爱的歌.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
